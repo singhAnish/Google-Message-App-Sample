@@ -1,0 +1,59 @@
+<layout>
+
+  <data class="MessageItemBinding"/>
+
+  <androidx.cardview.widget.CardView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      style="@style/card_style"
+      >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/view_wrap_padding"
+        >
+
+      <com.google.test.message.viewscustom.CircleImageView
+          android:id="@+id/user_icon"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:contentDescription="@string/lint_user_image_description"
+          style="@style/image_56"
+          />
+
+      <TextView
+          android:id="@+id/user_name"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          app:layout_constraintStart_toEndOf="@+id/user_icon"
+          app:layout_constraintTop_toTopOf="@+id/user_icon"
+          tools:text="User Name"
+          style="@style/text_title"
+          />
+
+      <TextView
+          android:id="@+id/user_message_time"
+          android:layout_marginBottom="8dp"
+          android:layout_marginStart="8dp"
+          app:layout_constraintBottom_toBottomOf="@+id/user_icon"
+          app:layout_constraintStart_toEndOf="@+id/user_icon"
+          app:layout_constraintTop_toBottomOf="@+id/user_name"
+          tools:text="20 Min ago"
+          style="@style/text_time"
+          />
+
+      <TextView
+          android:id="@+id/user_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/user_icon"
+          tools:text="hat a curious appearance in the distance and she added rather doubtfully, as she could said the King, that saves a world of trouble, you know, as we needn't try to find herself still in existence"
+          style="@style/text_content"
+          />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.cardview.widget.CardView>
+</layout>

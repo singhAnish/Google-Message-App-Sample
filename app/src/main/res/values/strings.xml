@@ -1,0 +1,28 @@
+<resources>
+  <string name="app_name">Message</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="nav_header_subtitle">message@android.com</string>
+  <string name="nav_header_desc">Navigation header</string>
+
+  <string name="menu_home">Home</string>
+  <string name="menu_gallery">Gallery</string>
+  <string name="menu_slideshow">Slideshow</string>
+  <string name="menu_tools">Tools</string>
+  <string name="communicate">Communicate</string>
+  <string name="menu_share">Share</string>
+  <string name="menu_send">Send</string>
+
+  <string name="lint_app_description">Message Icon</string>
+  <string name="lint_user_image_description">User Image</string>
+  <string name="no_internet_description">No internet Image</string>
+
+  <string name="retry">Retry</string>
+  <string name="noInternet">No network connection</string>
+
+  <string name="no_functionality">Functionality not implemented.</string>
+
+  <string name="dummy_button">Dummy Button</string>
+  <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>

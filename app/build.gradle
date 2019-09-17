@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion rootProject.compile_sdk_version
+  defaultConfig {
+    applicationId "com.google.test.message"
+    minSdkVersion rootProject.min_sdk_version
+    targetSdkVersion rootProject.target_sdk_version
+    versionCode rootProject.version_code
+    versionName rootProject.version_name
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  flavorDimensions "default"
+  productFlavors {
+    dev {
+      versionCode rootProject.version_code as Integer
+      versionName rootProject.version_name as String
+
+      buildConfigField("String", "BASE_URL", "\"http://message-list.appspot.com/\"")
+    }
+  }
+
+  dataBinding {
+    enabled true
+  }
+}
+
+dependencies {
+
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+  testImplementation "junit:junit:$rootProject.junit_version"
+  androidTestImplementation "androidx.test:runner:$rootProject.test_runner_version"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso_version"
+
+  //View Component
+  implementation "androidx.appcompat:appcompat:$rootProject.appcompat_version"
+  implementation "com.google.android.material:material:$rootProject.material_version"
+  implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraint_layout_version"
+  implementation "androidx.vectordrawable:vectordrawable:$rootProject.vector_drawable_version"
+  implementation "androidx.recyclerview:recyclerview:$rootProject.recycler_view_version"
+  implementation "androidx.cardview:cardview:$rootProject.cardview_version"
+
+  //Multidex & annotation Component
+  implementation "com.android.support:multidex:${rootProject.multidex_version}"
+  implementation "androidx.annotation:annotation:$rootProject.suuport_annotation_version"
+
+  //Lifecycle Component
+  implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycle_version"
+  annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.lifecycle_version"
+
+  //Network Component
+  implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.logging_interceptor_version}"
+  implementation "com.squareup.okhttp3:okhttp:${rootProject.okhttp_version}"
+  implementation("com.squareup.retrofit2:retrofit:${rootProject.retrofit_version}") {
+    exclude module: 'okhttp' // exclude Retrofit’s OkHttp dependency module and defining own module
+  }
+  implementation "com.github.bumptech.glide:glide:${rootProject.glide_version}"
+  implementation "com.jakewharton.timber:timber:${rootProject.timber_version}"
+
+  //Paging Component
+  implementation "android.arch.paging:runtime:$rootProject.paging_version"
+
+  //Data
+  implementation "com.google.code.gson:gson:${rootProject.gson_version}"
+  implementation "com.squareup.retrofit2:converter-gson:${rootProject.gson_convertor_version}"
+  implementation "com.fatboyindustrial.gson-jodatime-serialisers:gson-jodatime-serialisers:${rootProject.jodatime_version}"
+
+  //DI Component
+  implementation "com.google.dagger:dagger:${rootProject.dagger_version}"
+  annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.dagger_version}"
+}

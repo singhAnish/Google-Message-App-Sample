@@ -1,0 +1,96 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+  <style name="view_match_parent">
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_width">match_parent</item>
+  </style>
+
+  <style name="view_wrap_parent">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+  </style>
+
+  <style name="view_wrap_padding">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:padding">@dimen/standard_16</item>
+  </style>
+
+  <style name="text_splash">
+    <item name="android:textColor">@color/light_grey</item>
+    <item name="android:fontFamily">sans-serif-medium</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+  </style>
+
+  <style name="text_title">
+    <item name="android:textSize">@dimen/text_16</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:fontFamily">sans-serif-medium</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:layout_width">wrap_content</item>
+  </style>
+
+  <style name="text_time">
+    <item name="android:textSize">@dimen/text_14</item>
+    <item name="android:textColor">@color/grey</item>
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+  </style>
+
+  <style name="text_content">
+    <item name="android:textSize">@dimen/text_16</item>
+    <item name="android:textColor">@color/black99</item>
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:maxLines">3</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:lineSpacingExtra">@dimen/standard_4</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+  </style>
+
+  <style name="image_56">
+    <item name="android:textColor">@color/black</item>
+    <item name="android:layout_height">@dimen/standard_64</item>
+    <item name="android:layout_width">@dimen/standard_64</item>
+    <item name="android:src">@mipmap/ic_launcher</item>
+  </style>
+
+  <style name="card_style">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_marginTop">@dimen/standard_8</item>
+    <item name="android:layout_marginStart">@dimen/standard_8</item>
+    <item name="android:layout_marginEnd">@dimen/standard_8</item>
+  </style>
+
+  <style name="button">
+    <item name="android:textSize">@dimen/text_16</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:fontFamily">sans-serif-medium</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+  </style>
+
+</resources>
